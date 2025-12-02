@@ -1,0 +1,1 @@
+export {PartnersStatistic} from './ui/PartnersStastistic'

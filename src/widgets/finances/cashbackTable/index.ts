@@ -1,0 +1,1 @@
+export { CashbackTable } from "./ui/CashbackTable";

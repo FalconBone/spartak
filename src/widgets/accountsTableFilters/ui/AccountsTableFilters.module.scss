@@ -1,0 +1,50 @@
+.container {
+    color: #ffffff;
+    max-height: 200px;
+
+    textarea {
+        resize: none;
+    }
+
+    .filters {
+        display: flex;
+
+        .left_filters {
+            width: 300px;
+            align-self: stretch;
+            margin-right: 20px;
+
+            .select {
+                width: 100%;
+                height: 100px;
+            }
+        }
+
+        .right_filters {
+            display: flex;
+            flex: 1;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+
+        .select {
+            width: 200px;
+            margin-bottom: 10px;
+        }
+    }
+
+    .actions {
+        display: flex;
+        justify-content: space-between;
+
+        .choose {
+            color: rgba(255, 255, 255, 0.651);
+            font-style: italic;
+        }
+
+        .left_actions {
+            display: flex;
+            align-items: center;
+        }
+    }
+}

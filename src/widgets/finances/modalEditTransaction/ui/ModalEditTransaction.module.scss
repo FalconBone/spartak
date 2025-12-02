@@ -1,0 +1,28 @@
+.modal{
+    .input {
+        width: 100%;
+    }
+
+    .block {
+        margin-bottom: 10px;
+    }
+
+    .crypto {
+        display: flex;
+    }
+
+    .crypto_block {
+        flex: 1;
+    }
+
+    .select {
+        width: 100%;
+    }
+}
+
+.input {
+  &.error {
+    border: 1px solid #ff4d4f !important;
+    border-radius: 4px;
+  }
+}

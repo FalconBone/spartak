@@ -1,0 +1,181 @@
+/*! normalize.css v3.0.1 | MIT License | git.io/normalize */
+html{font-family:sans-serif;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}
+body{margin:0}
+article,aside,details,figcaption,figure,footer,header,hgroup,main,nav,section,summary{display:block}
+audio,canvas,progress,video{display:inline-block;vertical-align:baseline}
+audio:not([controls]){display:none;height:0}
+[hidden],template{display:none}
+a{background:transparent}
+a:active,a:hover{outline:0}
+abbr[title]{border-bottom:1px dotted}
+b,strong{font-weight:bold}
+dfn{font-style:italic}
+h1{font-size:2em;margin:0.67em 0}
+mark{background:#ff0;color:#000}
+small{font-size:80%}
+sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}
+sup{top:-0.5em}
+sub{bottom:-0.25em}
+img{border:0}
+svg:not(:root){overflow:hidden}
+figure{margin:1em 40px}
+hr{-moz-box-sizing:content-box;box-sizing:content-box;height:0}
+pre{overflow:auto}
+code,kbd,pre,samp{font-family:monospace,monospace;font-size:1em}
+button,input,optgroup,select,textarea{color:inherit;font:inherit;margin:0}
+button{overflow:visible}
+button,select{text-transform:none}
+button,html input[type="button"],input[type="reset"],input[type="submit"]{-webkit-appearance:button;cursor:pointer}
+button[disabled],html input[disabled]{cursor:default}
+button::-moz-focus-inner,input::-moz-focus-inner{border:0;padding:0}
+input{line-height:normal}
+input[type="checkbox"],input[type="radio"]{box-sizing:border-box;padding:0}
+input[type="number"]::-webkit-inner-spin-button,input[type="number"]::-webkit-outer-spin-button{height:auto}
+input[type="search"]{-webkit-appearance:textfield;-moz-box-sizing:content-box;-webkit-box-sizing:content-box;box-sizing:content-box}
+input[type="search"]::-webkit-search-cancel-button,input[type="search"]::-webkit-search-decoration{-webkit-appearance:none}
+fieldset{border:1px solid #c0c0c0;margin:0 2px;padding:0.35em 0.625em 0.75em}
+legend{border:0;padding:0}
+textarea{overflow:auto}
+optgroup{font-weight:bold}
+table{border-collapse:collapse;border-spacing:0}
+td,th{padding:0}
+
+@font-face {
+    font-family: 'Roboto';
+    src: url('../public/fonts/Roboto-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+
+html {
+    height: 100%;
+    overflow-x: hidden;
+    max-width: 100vw;
+    background-color: #141414;
+}
+
+body {
+    height: 100%;
+    font-family: 'Roboto';
+}
+
+#root {
+    height: 100%;
+}
+
+:root {
+  --scroll-track-bg: rgba(255, 255, 255, 0.03);
+  --scroll-thumb-bg: rgba(255, 255, 255, 0.08);
+  --scroll-thumb-hover: rgba(255, 255, 255, 0.14);
+  --scroll-thumb-active: rgba(255, 255, 255, 0.22);
+  --scroll-thumb-border: rgba(255, 255, 255, 0.12);
+  --scroll-radius: 10px;
+  --scroll-width: 16px;
+}
+
+*::-webkit-scrollbar {
+  width: var(--scroll-width);
+  height: var(--scroll-width);
+}
+
+*::-webkit-scrollbar-track {
+  background: var(--scroll-track-bg);
+  border-radius: var(--scroll-radius);
+  backdrop-filter: blur(4px);
+}
+
+*::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, var(--scroll-thumb-bg), var(--scroll-thumb-bg));
+  border: 10px solid var(--scroll-thumb-border);
+  border-radius: var(--scroll-radius);
+  min-height: 40px;
+  box-shadow: 0 0 8px rgba(0,0,0,0.35) inset;
+}
+
+*::-webkit-scrollbar-thumb:hover {
+  background: var(--scroll-thumb-hover);
+}
+
+*::-webkit-scrollbar-thumb:active {
+  background: var(--scroll-thumb-active);
+  transform: translateZ(0);
+}
+
+@media (pointer: coarse) {
+  *::-webkit-scrollbar { display: none; }
+}
+
+/* ---------- Firefox ---------- */
+:root {
+  --ff-scrollbar: rgba(255,255,255,0.08) rgba(255,255,255,0.03);
+}
+* {
+  scrollbar-width: auto;
+  scrollbar-color: var(--ff-scrollbar);
+}
+
+.my-scroll {
+  height: 300px;
+  overflow: auto;
+  background: rgba(0,0,0,0.35);
+  border-radius: 8px;
+  padding: 12px;
+}
+
+.my-scroll:focus {
+  outline: 2px solid rgba(255,255,255,0.08);
+  outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *::-webkit-scrollbar-thumb { transition: none; }
+}
+
+/* :where(.css-dev-only-do-not-override-eusr93).ant-select .ant-select-arrow {
+    color: #FFFFFF !important
+}
+
+.ant-select-arrow {
+    color: #FFFFFF !important
+}   
+
+
+:where(.css-dev-only-do-not-override-1sln63z).ant-modal .ant-modal-close {
+    color: #FFFFFF
+}
+
+.ant-checkbox-inner {
+    color: #ffffff57
+}
+
+:where(.css-dev-only-do-not-override-1l5yogp).ant-checkbox .ant-checkbox-inner {
+    color: #ffffff57
+}
+
+:where(.css-dev-only-do-not-override-1l5yogp).ant-select-multiple .ant-select-selection-overflow .ant-select-selection-item-remove {
+    color: #ffffffad
+}
+
+:where(.css-dev-only-do-not-override-1l5yogp).ant-modal .ant-modal-close {
+    color: inherit;
+}
+
+:where(.css-dev-only-do-not-override-1e0i9vr).ant-input-search >.ant-input-group >.ant-input-group-addon:last-child .ant-input-search-button:not(.ant-btn-primary) {
+    color: #FFFFFF
+}
+
+:where(.css-dev-only-do-not-override-r8kdqz).ant-menu-light.ant-menu-root.ant-menu-inline, :where(.css-dev-only-do-not-override-r8kdqz).ant-menu-light>.ant-menu.ant-menu-root.ant-menu-inline, :where(.css-dev-only-do-not-override-r8kdqz).ant-menu-light.ant-menu-root.ant-menu-vertical, :where(.css-dev-only-do-not-override-r8kdqz).ant-menu-light>.ant-menu.ant-menu-root.ant-menu-vertical {
+    border-inline-end: none;
+}
+
+:where(.css-dev-only-do-not-override-r8kdqz).ant-modal .ant-modal-close {
+    color: #FFFFFF;
+}
+
+:where(.css-dev-only-do-not-override-r8kdqz).ant-input-search >.ant-input-group >.ant-input-group-addon:last-child .ant-input-search-button:not(.ant-btn-primary) {
+    color: #FFFFFF
+}
+
+:where(.css-dev-only-do-not-override-r8kdqz).ant-drawer .ant-drawer-close {
+    color: #FFFFFF
+} */

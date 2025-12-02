@@ -1,0 +1,86 @@
+.container {
+
+    display: flex;
+    flex: 1 1 auto;
+    flex-direction: column;
+    height: 100%;
+
+    .settings {
+        display: flex;
+        justify-content: space-between;
+        padding: 20px 20px 0 20px;
+    }
+
+    .tabs {
+        padding: 0px 20px 0 20px;
+        flex: 1;
+        overflow: hidden;
+    }
+
+    .table {
+        overflow-y: auto;
+        position: relative;
+        height: 70vh;
+    }
+
+    table {
+        width: 100%;
+        border-collapse: separate;
+        border-spacing: 0;
+        table-layout: fixed;
+    }
+
+    thead {
+        position: sticky;
+        top: 0;
+        z-index: 1;
+        background-color: #151B23;
+    }
+
+    th,
+    td {
+        padding: 10px;
+        border-right: 1px solid rgba(255, 255, 255, 0.062);
+        border-left: 1px solid rgba(255, 255, 255, 0.062);
+        border-top: 1px solid rgba(223, 223, 223, 0.527);
+        text-overflow: ellipsis;
+        overflow: hidden;
+        white-space: nowrap;
+        text-align: center;
+    }
+
+    th {
+        border-top: none
+    }
+
+    th:nth-child(2),
+    td:nth-child(2) {
+        width: 40%;
+    }
+}
+
+.modal{
+    .input {
+        width: 100%;
+    }
+
+    .block {
+        margin-bottom: 10px;
+    }
+
+    .crypto {
+        display: flex;
+    }
+
+    .crypto_block {
+        flex: 1;
+    }
+}
+
+.input {
+  &.error {
+    border: 1px solid #ff4d4f !important;
+    border-radius: 4px;
+  }
+}
+

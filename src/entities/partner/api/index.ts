@@ -1,0 +1,1 @@
+export {partnerApi} from './api'

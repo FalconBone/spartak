@@ -1,0 +1,19 @@
+.container {
+    height: 100vh;
+    display: flex;
+    overflow: hidden;
+}
+
+.down_actions {
+    position: absolute;
+    bottom: 60px;
+    left: 25px;
+}
+
+.language {
+    color: white;
+    padding-left: 20px;
+    font-size: 20px;
+    margin-bottom: 10px;
+    cursor: pointer;
+}

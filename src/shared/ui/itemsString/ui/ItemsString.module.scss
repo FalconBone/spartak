@@ -1,0 +1,32 @@
+.container {
+  height: 100%;
+  display: flex;
+  padding-right: 6px;
+  padding-left: 6px;
+}
+
+.item {
+  border: 1px solid #212830; 
+  background-color: #151B23;
+  border-radius: 5px;
+  margin-right: 3px;
+  height: 23px;
+  padding: 0 6px;
+  align-self: center;
+  white-space: nowrap;
+}
+
+.countHiddenItems {
+  margin-left: auto;
+  align-self: center;
+  border: 1px solid #212830; 
+  background-color: #151B23;
+  border-radius: 5px;
+  padding: 0px 4px;
+}
+
+.shortName {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}

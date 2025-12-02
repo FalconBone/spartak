@@ -1,0 +1,116 @@
+.container {
+    display: flex;
+    justify-content: center;
+
+    .block {
+        display: flex;
+
+        .week {
+            color: white;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            padding: 20px 0;
+            padding-right: 10px;
+        }
+
+        .day {
+        }
+
+        .days {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .monthes {
+            display: flex;
+            justify-content: space-around;
+            padding-bottom: 6px;
+
+            .month {
+                color: white;
+            }
+        }
+
+        .table {
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+            align-items: flex-start;
+
+            .cell {
+                background-color: #1f1f1f;
+                margin-bottom: 6px;
+                margin-right: 6px;
+            }
+
+            @media (max-width: 2560px) {
+                .cell {
+                    width: 20px;
+                    height: 20px;
+                }
+            }
+
+            @media (max-width: 1800px) {
+                .cell {
+                    width: 13px;
+                    height: 13px;
+                    margin-bottom: 4px;
+                    margin-right: 4px;
+                }
+            }
+
+            @media (max-width: 1440px) {
+                .cell {
+                    width: 12px;
+                    height: 12px;
+                    margin-bottom: 4px;
+                    margin-right: 4px;
+                }
+            }
+        }
+
+                    @media (max-width: 2560px) {
+                .table {
+                    height: 200px;
+                }
+            }
+
+            @media (max-width: 1800px) {
+                .table {
+                    height: 130px;
+                }
+            }
+
+            @media (max-width: 1440px) {
+                .table {
+                    height: 120px;
+                }
+            }
+
+        .year_switcher {
+            color: white;
+            width: 200px;
+            padding: 0 20px;
+            padding-top: 20px;
+            padding-left: 30px;
+            display: flex;
+            flex-direction: column-reverse;
+            justify-content: start;
+
+            .year {
+                border-radius: 8px;
+                padding: 10px;
+                text-align: center;
+                background-color: #262626;
+                margin-bottom: 4px;
+                cursor: pointer;
+            }
+
+            .choosed_year {
+                background-color: #096dd9;
+                transition: background-color 0.3s ease-out;
+            }
+        }
+    }
+}

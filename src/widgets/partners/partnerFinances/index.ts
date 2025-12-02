@@ -1,0 +1,1 @@
+//export {PartnerFinances} from './ui/PartnerFinances'

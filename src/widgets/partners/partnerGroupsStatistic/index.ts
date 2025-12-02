@@ -1,0 +1,1 @@
+export {PartnerGroupsStatistic} from './ui/PartnerGroupsStatistic'

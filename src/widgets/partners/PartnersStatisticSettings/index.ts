@@ -1,0 +1,1 @@
+export {PartnersStatisticSettings} from './ui/PartnersStatisticSettings'

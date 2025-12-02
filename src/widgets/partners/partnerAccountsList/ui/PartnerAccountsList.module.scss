@@ -1,0 +1,176 @@
+.container {
+    display: flex;
+    border: 1px solid rgba(255, 255, 255, 0.205);
+    padding: 20px 20px 20px 14px;
+    overflow-y: auto;
+    border-radius: 10px;
+
+    table {
+
+        font-family: 'Roboto';
+        table-layout: fixed;
+        border-collapse: collapse;
+        color: #f0efef;
+        font-size: 12px;
+    }
+
+    .first_part_row {
+        position: relative;
+
+        &::after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 30px;
+            right: 0px;
+            height: 1px;
+            background-color: #f3f3f323;
+        }
+    }
+
+    tr {
+        position: relative;
+
+        &::after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 0px;
+            /* отступ слева */
+            right: 0px;
+            /* отступ справа */
+            height: 1px;
+            background-color: #f3f3f323;
+            ;
+            /* цвет границы */
+        }
+    }
+
+    .checkbox_header {
+        padding-right: 18px;
+
+    }
+
+    .checkbox_headerCell {
+        height: 40px;
+        margin: 0px 4px;
+        background-color: #141414;
+        width: 100%;
+        
+    -webkit-box-shadow: 6px -10px 0px 10px #141414;
+    -moz-box-shadow: 6px -10px 0px 10px #141414;
+    box-shadow: 6px -10px 0px 10px #141414;
+    }
+
+    
+
+    thead {
+
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+
+
+        tr {
+            &::after {
+                content: none;
+            }
+            th {
+                z-index: 1000;
+                font-size: 14px;
+                font-weight: 500;
+
+                white-space: nowrap;
+                text-overflow: ellipsis;
+
+            }
+        }
+    }
+
+    tbody {
+
+        td {
+            height: 24px;
+            box-sizing: border-box;
+        }
+
+        .cell {
+            box-sizing: border-box;
+            background-color: #1f1f1f;
+            height: 32px;
+            padding: 10px 10px 10px 10px;
+            margin: 0px 4px;
+            text-align: center;
+        }
+
+        .cell_checkbox {
+            z-index: 200;
+
+        }
+
+        .groupRow {
+            height: 40px;
+
+        }
+
+        .groupCell {
+            display: flex;
+            align-items: center;
+            text-align: center;
+            justify-content: center;
+            height: 24px;
+            background-color: #262626;
+        }
+
+        .firstGroupCell {
+            margin-left: 4px;
+        }
+
+        .name {
+
+            white-space: nowrap;
+        }
+
+        .statusSelect {
+            padding: 0 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            .status_label {
+                width: 80px;
+
+                border-radius: 8px;
+            }
+        }
+    }
+}
+
+.headerCell {
+    background-color: #141414;
+    height: 40px;
+    padding: 10px;
+    margin: 0px 4px;
+    -webkit-box-shadow: 6px -10px 0px 10px #141414;
+    -moz-box-shadow: 6px -10px 0px 10px #141414;
+    box-shadow: 6px -10px 0px 10px #141414;
+}
+
+.container::-webkit-scrollbar-thumb {
+    /* цвет бегунка */
+    border-radius: 20px;
+    /* округлось бегунка */
+    border: 10px solid #d9d9d9
+        /* отступ вокруг бегунка */
+}
+
+.container::-webkit-scrollbar {
+    width: 15px;
+    height: 15px;
+    /* ширина всей полосы прокрутки */
+}
+
+.container::-webkit-scrollbar-corner {
+  background: #141414; /* Любой цвет фона */
+  border-radius: 20px;
+}

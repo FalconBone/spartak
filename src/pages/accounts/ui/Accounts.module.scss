@@ -1,0 +1,38 @@
+.container {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+
+    .header,
+    .content,
+    .filters {
+        padding: 20px;
+    }
+
+    @media (max-width: 1260px) {
+        .filters {
+            margin-bottom: 20px;
+        }
+    }
+
+    @media (max-width: 1059px) {
+        .filters {
+            margin-bottom: 150px;
+        }
+    }
+
+    .content {
+        flex: 1 1 auto;
+        display: flex;
+        flex-direction: column;
+        min-height: 0;
+    }
+
+    .header {
+        color: #ffffff
+    }
+
+    .filters {
+        padding-bottom: 20px;
+    }
+}

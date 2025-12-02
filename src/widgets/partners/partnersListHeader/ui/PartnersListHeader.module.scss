@@ -1,0 +1,18 @@
+.container {
+    height: 120px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #ffffff;
+    padding: 20px;
+}
+
+.title {
+    font-size: 30px;
+    font-weight: 500;
+    display: inline;
+}
+
+.toStatistic {
+    margin-left: auto;
+}

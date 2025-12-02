@@ -1,0 +1,21 @@
+.container {
+    display: flex;
+    height: 100%;
+
+    .balance {
+        flex: 1;
+        display: flex;
+        flex-wrap: wrap;
+
+        .card {
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+            min-width: 230px;
+        }
+    }
+
+    .settings {
+        height: 100%;
+    }
+}

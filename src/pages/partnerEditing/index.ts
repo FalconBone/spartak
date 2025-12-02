@@ -1,0 +1,1 @@
+export {PartnerEditing} from './ui/PartnerEditing'

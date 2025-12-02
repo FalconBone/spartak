@@ -1,0 +1,40 @@
+.container {
+    margin-bottom: 80px;
+    height: 100%;
+    padding: 20px;
+
+    .filters {
+        margin-bottom: 20px;
+        
+
+        .select {
+            margin-right: 20px;
+            width: 200px;
+        }
+    }
+
+    .chart {
+        border-radius: 10px;
+        margin-bottom: 20px;
+        height: 250px;
+    }
+
+    .statistic {
+        height: 400px;
+
+        h1 {
+            font-weight: 500;
+            color: rgba(255, 255, 255, 0.85);;
+        }
+    }
+    
+    @media screen and (max-width: 1400px) {
+        .chart {
+            height: 160px;
+        }
+
+        .statistic {
+            height: 310px;
+        }
+    }
+}

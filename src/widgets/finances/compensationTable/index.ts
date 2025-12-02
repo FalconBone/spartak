@@ -1,0 +1,1 @@
+export { CompensationTable } from "./ui/CompensationTable";

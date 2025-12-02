@@ -1,0 +1,128 @@
+.grid {
+    color: white;
+    padding: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.253);
+    border-radius: 8px;
+    background-color: #141414;
+
+    .cell {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+
+        .spend {
+            width: 100%;
+            text-align: center;
+        }
+
+
+    }
+
+    .status_cell {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+
+        .status {
+            width: 90px;
+            border-radius: 9px;
+            height: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+    }
+
+    .spend_cell {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 20px;
+    }
+}
+
+.input_wrapper {
+    border-radius: 10px;
+    padding-top: 4px;
+}
+
+.input_label {
+    width: 20px;
+    height: 20px;
+    background-color: red;
+}
+
+.checkbox {
+     width: 1rem;
+    height: 1rem;
+    border-radius: 0.25rem;
+    background-color: #fff;
+    cursor: pointer;
+    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+    margin: 0;
+    appearance: none;
+    -webkit-appearance: none; 
+}
+
+.checkbox:checked {
+    background-color: #0d6efd;
+    border-color: #0d6efd;
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3e%3cpath fill='none' stroke='%23fff' stroke-linecap='round' stroke-linejoin='round' stroke-width='3' d='m6 10 3 3 6-6'/%3e%3c/svg%3e");
+}
+
+.not_found_block {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    padding-bottom: 300px;
+    color: white;
+}
+
+.no_found_block_title {
+    font-size: 30px;
+}
+
+.loader {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    overflow: hidden;
+}
+
+.ag-root-wrapper {
+    border: none;
+}
+
+.ag-cell-wrapper {
+    width: 100%;
+}
+
+.ag-header {
+    background-color: #141414;
+    color: white
+}
+
+.ag-row {
+    height: 10px;
+}
+
+.ag-cell-label-container {
+    justify-content: center;
+}
+
+.ag-cell-value {
+    text-overflow: clip;
+}
+
+.ag-chart, .ag-dnd-ghost, .ag-popup, .ag-root-wrapper {
+    background-color: transparent
+}
+
+.ag-header-cell-label {
+  justify-content: center;
+}

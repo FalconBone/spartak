@@ -1,0 +1,19 @@
+{
+  "files": [],
+  "references": [
+    { "path": "./tsconfig.app.json" },
+    { "path": "./tsconfig.node.json" }
+  ],
+  "compilerOptions": {
+    "baseUrl": "./src",
+    "paths": {
+      "@pages/*": ["./pages/*"],
+      "@shared/*": ["./shared/*"],
+      "@widgets/*": ["./widgets/*"],
+      "@entities/*": ["./entities/*"],
+      "@features/*": ["./features/*"],
+      "@app/*": ["./app/*"],
+    },
+    "plugins": [{ "name": "typescript-plugin-css-modules" }]
+  }
+}

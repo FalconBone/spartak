@@ -1,0 +1,32 @@
+.select {
+    border-radius: 10px;
+    text-align: center;
+}
+
+.select:hover {
+    cursor: pointer;
+}
+
+.option {
+    background-color: #151B23;
+    color: white
+}
+
+
+.active {
+    border: 1px solid green;
+    color: #48EA50;
+    background-color: #284B36;
+}
+
+.disabled {
+    border: 1px solid rgb(165, 0, 0);
+    color: rgb(216, 47, 47);
+    background-color: rgb(87, 0, 0);
+}
+
+.none {
+    border: 1px solid black;
+    color: #D1D7E0;
+    background-color: #151B23;
+}

@@ -1,0 +1,104 @@
+.container {
+    border-bottom: 1px solid #3d444db3;
+    border-right: 1px solid #3d444db3;
+    height: 60px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 10px 40px 10px 20px;
+    font-size: 20px;
+    justify-content: space-between;
+    position: relative;
+    color: rgba(255, 255, 255, 0.9);
+
+
+    &:hover .hover_view {
+        background-color: #0050b3;
+        transition: 0.1s all;
+    }
+
+    &:hover {
+        color: white;
+        background-color: #1f1f1f;
+    }
+
+    .hover_view {
+        position: absolute;
+        width: 7px;
+        height: 100%;
+        left: 0;
+        transition: 0.2s all;
+    }
+
+    .accounts {
+        font-size: 14px;
+        width: 200px;
+        color: rgb(153, 153, 153);
+
+        .number {
+            color: white;
+        }
+    }
+
+    .accountsHead {
+        width: 200px;
+    }
+
+    .balance {
+        font-size: 16px;
+        text-align: right;
+        width: 100px;
+    }
+
+    .managers {
+        width: 350px;
+        display: flex;
+        justify-content: end;
+
+        span {
+            font-size: 14px;
+            background-color: #262626;
+            border-radius: 15px;
+            padding: 0 10px;
+            padding-bottom: 4px;
+            max-width: 100px;
+
+            display: inline-block;
+            text-align: center;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        .other {
+
+            overflow:visible;
+            text-overflow:clip;
+        }
+    }
+}
+
+.head {
+    border: none;
+    color: white;
+
+    &:hover {
+        background-color: transparent;
+    }
+
+    .managers {
+        display: block;
+        text-align: center;
+    };
+}
+
+.nameId {
+    width: 300px;
+}
+
+.badge {
+    width: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

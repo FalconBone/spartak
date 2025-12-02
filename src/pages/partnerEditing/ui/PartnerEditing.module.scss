@@ -1,0 +1,70 @@
+.container {
+  padding: 0 0 0 20px;
+
+  .header {
+    color: white;
+    font-size: 20px;
+    font-weight: 400;
+
+    .partnerName {
+      font-size: 40px;
+    }
+  }
+
+  .main {
+    color: white;
+    display: flex;
+    flex-direction: row;
+
+    .info_block_table {
+
+      .info_title_table {
+        font-size: 22px;
+        color: rgba(255, 255, 255, 0.9);
+        border-right: 1px solid rgba(255, 255, 255, 0.2);
+        margin-bottom: 8px;
+        padding-right: 20px;
+      }
+
+      .table {
+        padding-right: 20px;
+
+        .input {
+          box-sizing: border-box;
+          background: transparent;
+          border: 1px solid transparent;
+          border-radius: 5px;
+
+          &:hover {
+            border: 1px solid rgba(255, 255, 255, 0.24);
+          }
+        }
+      }
+    }
+
+    .info_block {
+      margin-bottom: 20px;
+
+      .info_title {
+        font-size: 22px;
+        color: rgba(255, 255, 255, 0.9);
+        border-right: 1px solid rgba(255, 255, 255, 0.2);
+        padding: 0 30px;
+        margin-bottom: 8px;
+      }
+
+      .info_value {
+        font-size: 18px;
+        padding: 0 30px;
+      }
+
+      &:last-child {
+        .info_title {
+          border-right: none;
+        }
+      }
+    }
+
+    
+  }
+}
