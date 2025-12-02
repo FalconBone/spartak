@@ -18,11 +18,11 @@ export const Providers = ({ children }: Props) => {
         <ErrorBoundary fallback={<ErrorPage/>}>
             <Provider store={store}>
                 <BrowserRouter>
-                    <InitializationProvider>
+                    {/*<InitializationProvider>*/}
                         <ThemeProvider>
                             {children}
                         </ThemeProvider>
-                    </InitializationProvider>
+                    {/*</InitializationProvider>*/}
                 </BrowserRouter>
             </Provider>
         </ErrorBoundary>

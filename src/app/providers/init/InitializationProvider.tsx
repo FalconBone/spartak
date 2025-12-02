@@ -12,29 +12,29 @@ type Props = {
 export const InitializationProvider = ({ children }: Props) => {
 
   const location = useLocation()
-  const [getMe, { isLoading, isError, error, status }] = useGetMeMutation();
+  //const [getMe, { isLoading, isError, error, status }] = useGetMeMutation();
   const navigate = useNavigate()
 
-  useEffect(() => {
+  // useEffect(() => {
 
-    const checkAuth = async () => {
-      await getMe()
-      const statusCode = Number(status)
-      if (isError || statusCode === 401) {
-        navigate('/login')
-      }
-    }
+  //   const checkAuth = async () => {
+  //     await getMe()
+  //     const statusCode = Number(status)
+  //     if (isError || statusCode === 401) {
+  //       navigate('/login')
+  //     }
+  //   }
 
-    if (location.pathname !== navigationMap.login) {
-      checkAuth()
-    }
-  }, [])
+  //   if (location.pathname !== navigationMap.login) {
+  //     checkAuth()
+  //   }
+  // }, [])
 
   return (
     <>
-      { isLoading ? (
+      {/* { isLoading ? (
         <Spin size="large" fullscreen/>
-        ) : children}
+        ) : children} */}
     </>
   )
 

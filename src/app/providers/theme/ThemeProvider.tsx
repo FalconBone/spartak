@@ -67,26 +67,9 @@ export const ThemeProvider = ({children} : ThemeProviderProps) => {
           
         },
         components*/
-        algorithm: theme.darkAlgorithm,
+        //algorithm: theme.darkAlgorithm,
         components: {
-          Layout: {
-            headerBg: 'black',
-            headerColor: 'white',
-            siderBg: '#1f1f1f',
-            triggerBg: '#262626',
-            bodyBg: '#141414',
-  
-          },
-          Menu: {
-            itemBg: 'black',
-            darkItemBg: '#1f1f1f',
-            darkSubMenuItemBg: '#1f1f1f'
-          },
-          Result: {
-            colorTextHeading: 'white',
-            colorWarning: 'white',
-            colorText: 'white',
-          }
+          
         }
       }}>
       {children}

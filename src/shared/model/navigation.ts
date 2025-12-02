@@ -1,20 +1,5 @@
 export const navigationMap = {
     home: '/',
-    accounts: '/accounts',
-    partner: '/partner',
-    partnerById: '/partner/:id',
-    partnerGroups: '/partner/:id/groups',
-    partners: '/partners',
-    info: '/partner/:id/info',
-    businessmanager: 'businessmanager',
-    businessmanagerById: '/businessmanager/:id',
-    businesses: '/businesses',
-    main: '/main',
-    login: '/login',
-    partnersStatistic: '/partners/statistic',
-    finances: '/finances',
-    partnerEditing: '/partner/:id/edit',
-    telegramAuth: 'telegram/auth',
-    fbAccount: '/account/:id',
-    users: '/users',
+    userAvatar: '/me',
+    login: '/login'
   };

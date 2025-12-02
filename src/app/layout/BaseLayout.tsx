@@ -66,27 +66,6 @@ export const BaseLayout = ({ children }: Props) => {
 
     const location = useLocation()
 
-    useEcho<WSAccountChanges>("facebook_updates", ".FbAccount.updated", (payload) => {
-        store.dispatch(
-            accountApi.util.updateQueryData('getAllAccounts', accountTableFilters, (draft) => {
-                if (draft.table[payload.id]) {
-                    draft.table[payload.id].balance = payload.fb_balance
-                    draft.table[payload.id].fb_spend_cap = payload.fb_spend_cap
-                    draft.table[payload.id].fb_status = String(payload.fb_account_status)
-                    draft.table[payload.id].name = payload.fb_name
-                    draft.table[payload.id].status = payload.using_status
-                    draft.table[payload.id].partnerships = payload.fb_agencies
-                    draft.table[payload.id].timezone_offset_hours_utc = payload.fb_timezone_offset_hours_utc
-                    draft.table[payload.id].fb_funding_source_detail = payload.fb_funding_source_detail
-                }
-            })
-        )
-    });
-
-    useEcho<WSAccountChanges>("facebook_updates", ".FbAccount.failed", (payload) => {
-        console.log(payload)
-    });
-
     useEffect(() => {
         i18n.changeLanguage('ru');
     }, [])
@@ -128,74 +107,9 @@ export const BaseLayout = ({ children }: Props) => {
         }
     };
 
-    const ManagerItems: MenuItem[] = [
-        getItem(<NavLink to='/partners'>{t('partners')}</NavLink>, '1', <ProductOutlined />),
-        getItem(<NavLink to='/accounts'>{t('adAccounts')}</NavLink>, '3', <TeamOutlined />),
-        getItem(<NavLink to={navigationMap.finances}>{t('finances')}</NavLink>, '4', <MoneyCollectOutlined />),
-        getItem(<NavLink to='/login' onClick={exit}>{t('logout')}</NavLink>, '5', <DesktopOutlined />),
-    ];
-
-
-    const AdminItems: MenuItem[] = [
-        getItem(<NavLink to='/partners'>{t('partners')}</NavLink>, '1', <ProductOutlined />),
-        getItem(t('summaryStatistics'), '2', <PieChartOutlined />, [
-            getItem(<NavLink to={navigationMap.partnersStatistic}>{t('summaryStatistics')}</NavLink>, '6'),
-            getItem(<NavLink to={navigationMap.partnersStatistic}>{t('summaryStatistics')}</NavLink>, '7'),
-        ]),
-        getItem(<NavLink to='/accounts'>{t('adAccounts')}</NavLink>, '3', <TeamOutlined />),
-        getItem(<NavLink to={navigationMap.finances}>{t('finances')}</NavLink>, '4', <MoneyCollectOutlined />),
-        getItem(<NavLink to='/login' onClick={exit}>{t('logout')}</NavLink>, '5', <DesktopOutlined />),
-    ]
-
-    const OwnerItems: MenuItem[] = [
-        getItem(<NavLink to='/partners'>{t('partners')}</NavLink>, '1', <ProductOutlined />),
-        getItem(t('summaryStatistics'), '2', <PieChartOutlined />, [
-            getItem(<NavLink to={navigationMap.partnersStatistic}>{t('summaryStatistics')}</NavLink>, '6'),
-        ]),
-        getItem(<NavLink to='/accounts'>{t('adAccounts')}</NavLink>, '3', <TeamOutlined />),
-        getItem(<NavLink to={navigationMap.finances}>{t('finances')}</NavLink>, '4', <MoneyCollectOutlined />),
-        getItem(<NavLink to='/users'>{t('users')}</NavLink>, '8', <UserSwitchOutlined />),
-        getItem(<NavLink to='/login' onClick={exit}>{t('logout')}</NavLink>, '5', <DesktopOutlined />),
-    ]
-
-    const getUserMenuItems = () => {
-
-        const userRoles = getMeFromLocalStorage()
-        for (let i = 0; i < userRoles?.length; i++) {
-            if (userRoles[i].name === 'Admins') {
-                return AdminItems
-            }
-            if (userRoles[i].name === 'Owners') {
-                return OwnerItems
-            }
-            if (userRoles[i].name === 'Managers') {
-                return ManagerItems
-            }
-            if (userRoles[i].name === 'Developers') {
-                return OwnerItems
-            }
-        }
-    }
-
     return (
-        <Layout style={{ height: '100vh' }}>
-            <Layout.Sider style={siderStyle} width={300} collapsible collapsed={collapsed} onCollapse={onCollapse}>
-                <div style={{ marginBottom: '80px' }} />
-                <Menu theme='dark' selectedKeys={[getCurrentKey()]} mode="inline" items={getUserMenuItems()} style={{ fontWeight: 500 }} />
-                {/* <div className={classes.language} onClick={() => changeLanguage('en')}>
-                    Английский
-                </div>
-                <div className={classes.language} onClick={() => changeLanguage('ru')}>
-                    Русский
-                </div> */}
-                <div className={classes.down_actions}>
-                    <NavLink style={{ alignSelf: 'flex-end' }} to={`https://t.me/magixbot`} onClick={exit}>{telegramSVG}</NavLink>
-                </div>
-
-            </Layout.Sider>
             <Layout className={classes.container} style={{ height: '100vh' }}>
                 {children}
             </Layout>
-        </Layout>
     )
 }
