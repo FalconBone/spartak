@@ -1,1 +1,0 @@
-export {PartnerAccountsListSettings} from './ui/PartnerAccountsListSettings'

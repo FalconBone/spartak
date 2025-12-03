@@ -14,6 +14,8 @@ import { useLocation } from 'react-router-dom'
 import { store } from '@app/providers/store'
 import { accountApi } from '@entities/account/api/api'
 import { useAppSelector } from '@shared/hooks'
+import { Header } from '@widgets/header/Header'
+import { Footer } from '@widgets/footer/Footer'
 
 type MenuItem = Required<MenuProps>['items'][number];
 
@@ -109,7 +111,9 @@ export const BaseLayout = ({ children }: Props) => {
 
     return (
             <Layout className={classes.container} style={{ height: '100vh' }}>
+                <Header/>
                 {children}
+                <Footer/>
             </Layout>
     )
 }

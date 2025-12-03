@@ -1,1 +1,0 @@
-export {AccountSpendTable} from './ui/AccountSpendTable'

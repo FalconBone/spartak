@@ -1,1 +1,0 @@
-export {PartnerAccountsPage} from './ui/PartnerAccountsPage'

@@ -1,1 +1,1 @@
-export {UserAvatar} from './ui/UserAvatar'
+export {CharacterPage} from './ui/CharacterPage'

@@ -1,1 +1,0 @@
-export {ModalAddTransaction} from './ui/ModalAddTransaction'

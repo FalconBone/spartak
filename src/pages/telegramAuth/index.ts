@@ -1,1 +1,0 @@
-export {TelegramAuthPage} from './ui/TelegramAuthPage'

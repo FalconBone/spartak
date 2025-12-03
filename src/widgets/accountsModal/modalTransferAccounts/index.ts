@@ -1,1 +1,0 @@
-export {ModalTransferAccounts} from './ui/ModalTransferAccounts'

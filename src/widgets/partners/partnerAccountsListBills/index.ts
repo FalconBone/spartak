@@ -1,1 +1,0 @@
-export {PartnerAccountsListBills} from './ui/PartnerAccountsListBills'

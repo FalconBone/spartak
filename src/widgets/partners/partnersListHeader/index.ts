@@ -1,1 +1,0 @@
-export {PartnersListHeader} from './ui/PartnersListHeader'

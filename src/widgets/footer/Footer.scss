@@ -1,0 +1,40 @@
+.footer {
+  width: 100%;
+  padding: 12px 10px;
+  background: #ffffff;
+  box-shadow: 0 -4px 14px rgba(0, 0, 0, 0.08);
+
+  &__nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__btn {
+    flex: 1;
+    background: transparent;
+    border: none;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    align-items: center;
+    justify-content: center;
+    padding: 6px;
+
+    &:active {
+      transform: scale(0.92);
+    }
+  }
+
+  &__icon {
+    svg {
+      width: 24px;
+      height: 24px;
+    }
+  }
+
+  &__label {
+    font-size: 11px;
+    color: #4b5563;
+  }
+}

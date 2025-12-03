@@ -1,0 +1,26 @@
+.ui-button {
+  background: #3b82f6;
+  color: white;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: transform 0.15s ease;
+  font-weight: 500;
+
+  &.default {
+    padding: 10px 16px;
+  }
+
+  &.icon {
+    padding: 10px;
+    width: 48px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &:active {
+    transform: scale(0.95);
+  }
+}

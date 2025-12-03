@@ -1,1 +1,0 @@
-export {AccountsTableModalTransfer} from './ui/AccountTableModalTransfer'

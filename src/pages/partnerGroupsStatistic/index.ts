@@ -1,1 +1,0 @@
-export {PartnerGroupsStatisticPage} from './ui/PartnerGroupsStatisticPage'

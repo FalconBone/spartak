@@ -1,1 +1,0 @@
-export { PartnerStatisticBlock } from "./ui/PartnerStatisticBlock";

@@ -1,0 +1,99 @@
+.character-page {
+  min-height: 76%;
+  padding: 24px;
+  background: #f3f4f6;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.character-section {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+.side-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.icon-button {
+  background: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  padding: 16px !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  svg {
+    width: 28px;
+    height: 28px;
+  }
+}
+
+.skin-selector {
+  display: flex;
+  gap: 12px;
+  margin-top: 24px;
+}
+
+.skin-color {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 2px solid #ddd;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: transform 0.15s ease;
+
+  &:active {
+    transform: scale(0.9);
+  }
+}
+
+.quests-modal {
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+
+  h2 {
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 8px;
+  }
+
+  ul {
+    list-style: disc;
+    padding-left: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+
+    li {
+      font-size: 16px;
+    }
+  }
+
+  .close-btn {
+    margin-top: 12px;
+    width: 100%;
+  }
+}
+
+// Адаптив под мобильные
+@media (max-width: 480px) {
+  .character-section {
+    flex-direction: column;
+  }
+
+  .side-buttons {
+    flex-direction: row;
+    gap: 20px;
+  }
+}
