@@ -110,9 +110,11 @@ export const BaseLayout = ({ children }: Props) => {
     };
 
     return (
-            <Layout className={classes.container} style={{ height: '100vh' }}>
+            <Layout className={classes.container}>
                 <Header/>
-                {children}
+                <div className={classes.main}>
+                    {children}
+                </div>
                 <Footer/>
             </Layout>
     )

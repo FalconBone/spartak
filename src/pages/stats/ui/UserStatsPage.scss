@@ -1,0 +1,96 @@
+.stat-page {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+
+  &__title {
+    font-size: 22px;
+    font-weight: 700;
+    margin-bottom: 12px;
+    text-align: center;
+  }
+
+  &__cards {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+  }
+
+  &__card {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 14px 16px;
+    background: #ffffff;
+    border-radius: 16px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    transition: transform 0.15s ease;
+
+    &:active {
+      transform: scale(0.97);
+    }
+
+    &__icon {
+      width: 40px;
+      height: 40px;
+      background: #f3f4f6;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      svg {
+        width: 22px;
+        height: 22px;
+        color: #4b5563;
+      }
+    }
+
+    &__info {
+      display: flex;
+      flex-direction: column;
+    }
+
+    &__label {
+      font-size: 14px;
+      font-weight: 500;
+      color: #6b7280;
+    }
+
+    &__value {
+      font-size: 18px;
+      font-weight: 600;
+      color: #111827;
+    }
+  }
+}
+
+// адаптив под мобилки
+@media (max-width: 480px) {
+  .stat-page__cards {
+    gap: 10px;
+  }
+
+  .stat-page__card {
+    padding: 12px;
+    gap: 10px;
+
+    &__icon {
+      width: 36px;
+      height: 36px;
+
+      svg {
+        width: 20px;
+        height: 20px;
+      }
+    }
+
+    &__value {
+      font-size: 16px;
+    }
+  }
+
+  .stat-page__title {
+    font-size: 20px;
+  }
+}

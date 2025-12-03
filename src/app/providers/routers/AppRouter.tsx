@@ -5,6 +5,8 @@ import { ProtectedRoute } from "./ProtectedRoute";
 import { ErrorPage } from "@shared/ui/errorPage";
 import { NotFound } from "@pages/notFound";
 import { CharacterPage } from "@pages/userAvatar";
+import { UserStatsPage } from "@pages/stats";
+import { QuestsPage } from "@pages/quests";
 
 export const AppRouter = () => {
 
@@ -17,10 +19,26 @@ export const AppRouter = () => {
             >
                 <Route path="/" element={<Navigate to={navigationMap.userAvatar} />} />
                 <Route
+                    path={navigationMap.stats}
+                    element={
+                        <ProtectedRoute roles={['Admins', 'Owners', 'Managers', 'Developers']}>
+                            {<UserStatsPage/>}
+                        </ProtectedRoute>
+                    }
+                />
+                <Route
                     path={navigationMap.userAvatar}
                     element={
                         <ProtectedRoute roles={['Admins', 'Owners', 'Managers', 'Developers']}>
                             {<CharacterPage/>}
+                        </ProtectedRoute>
+                    }
+                />
+                <Route
+                    path={navigationMap.quests}
+                    element={
+                        <ProtectedRoute roles={['Admins', 'Owners', 'Managers', 'Developers']}>
+                            {<QuestsPage/>}
                         </ProtectedRoute>
                     }
                 />

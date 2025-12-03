@@ -1,0 +1,85 @@
+.quest-page {
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+
+  &__title {
+    font-size: 26px;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 8px;
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+}
+
+.quest-card {
+  padding: 16px;
+  border-radius: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+
+  &__top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__title {
+    font-size: 20px;
+    font-weight: 600;
+  }
+
+  &__reward {
+    font-size: 14px;
+    background: rgba(255, 255, 255, 0.6);
+    padding: 4px 10px;
+    border-radius: 10px;
+    font-weight: 600;
+  }
+
+  &__progress-row {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+
+  &__count {
+    font-size: 14px;
+    font-weight: 500;
+    min-width: 40px;
+  }
+
+  &__bar {
+    flex: 1;
+    height: 8px;
+    background: rgba(255, 255, 255, 0.4);
+    border-radius: 6px;
+    overflow: hidden;
+  }
+
+  &__bar-fill {
+    height: 100%;
+    background: rgba(0, 0, 0, 0.25);
+    border-radius: 6px;
+    transition: width 0.3s ease;
+  }
+}
+
+/* Мобильный адаптив */
+@media (max-width: 480px) {
+  .quest-card {
+    padding: 14px;
+
+    &__title {
+      font-size: 18px;
+    }
+  }
+}

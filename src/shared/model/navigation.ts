@@ -1,5 +1,8 @@
 export const navigationMap = {
-    home: '/',
+    main: '/',
     userAvatar: '/me',
-    login: '/login'
+    login: '/login',
+    stats: '/stats',
+    map: '/map',
+    quests: '/quests'
   };
