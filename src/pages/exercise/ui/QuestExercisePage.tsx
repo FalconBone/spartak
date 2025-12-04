@@ -3,8 +3,13 @@
 import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import "./QuestExercisePage.scss";
+import { usePlayerStore } from "@shared/store/usePlayerStore";
 
 export function QuestExercisePage() {
+
+    const addXP = usePlayerStore((s) => s.addXP);
+    const spendEnergy = usePlayerStore((s) => s.spendEnergy);
+
   const navigate = useNavigate();
 
   const [exercises, setExercises] = useState([
@@ -55,12 +60,21 @@ export function QuestExercisePage() {
   }
 
   // Если все упражнения выполнены — вернуться назад
-  useEffect(() => {
-    const allDone = exercises.every((ex) => ex.completed);
-    if (allDone) {
-      setTimeout(() => navigate(-1), 500);
-    }
-  }, [exercises]);
+useEffect(() => {
+  const allDone = exercises.every((ex) => ex.completed);
+
+  if (allDone) {
+    // 1. Снять энергию
+    spendEnergy(1);
+
+    // 2. Начислить опыт
+    addXP(80);
+
+    // 3. Вернуться назад
+    setTimeout(() => navigate(-1), 500);
+  }
+}, [exercises]);
+
 
   return (
     <div className="exercise-page">

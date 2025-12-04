@@ -1,6 +1,8 @@
 // src/widgets/Header/Header.tsx
 import { Settings } from "lucide-react";
 import "./Header.scss";
+import { useState } from "react";
+import { usePlayerStore } from "@shared/store/usePlayerStore";
 
 interface HeaderProps {
   username: string;
@@ -13,10 +15,9 @@ interface HeaderProps {
 
 export function Header() {
 
-  const username = 'FalconBone'
-  const energy = 5
-  const level = 14
-  const xp = 153
+  const [username, setUsername] = useState<string>('FalconBone')
+  const { energy, level, xp } = usePlayerStore();
+
 
   const xpPercent = Math.min((xp / 999) * 100, 100);
   const energyBlocks = Array.from({ length: 10 }, (_, i) => i < energy);
