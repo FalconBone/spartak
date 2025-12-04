@@ -1,6 +1,10 @@
+import { useNavigate } from "react-router-dom";
 import "./QuestsPage.scss";
+import { navigationMap } from "@shared/model";
 
 export function QuestsPage() {
+
+  const navigate = useNavigate()
   const quests = [
     {
       title: "Утренняя разминка",
@@ -42,6 +46,7 @@ export function QuestsPage() {
 
           return (
             <div
+              onClick={() => navigate(navigationMap.tasks)}
               key={i}
               className="quest-card"
               style={{ backgroundColor: q.color }}

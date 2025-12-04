@@ -4,5 +4,6 @@ export const navigationMap = {
     login: '/login',
     stats: '/stats',
     map: '/map',
-    quests: '/quests'
+    quests: '/quests',
+    tasks: '/tasks'
   };

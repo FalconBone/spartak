@@ -7,6 +7,8 @@ import { NotFound } from "@pages/notFound";
 import { CharacterPage } from "@pages/userAvatar";
 import { UserStatsPage } from "@pages/stats";
 import { QuestsPage } from "@pages/quests";
+import { QuestExercisePage } from "@pages/exercise";
+import { QuestMapPage } from "@pages/questMap";
 
 export const AppRouter = () => {
 
@@ -39,6 +41,22 @@ export const AppRouter = () => {
                     element={
                         <ProtectedRoute roles={['Admins', 'Owners', 'Managers', 'Developers']}>
                             {<QuestsPage/>}
+                        </ProtectedRoute>
+                    }
+                />
+                <Route
+                    path={navigationMap.tasks}
+                    element={
+                        <ProtectedRoute roles={['Admins', 'Owners', 'Managers', 'Developers']}>
+                            {<QuestExercisePage/>}
+                        </ProtectedRoute>
+                    }
+                />
+                <Route
+                    path={navigationMap.map}
+                    element={
+                        <ProtectedRoute roles={['Admins', 'Owners', 'Managers', 'Developers']}>
+                            {<QuestMapPage/>}
                         </ProtectedRoute>
                     }
                 />
