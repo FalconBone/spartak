@@ -15,14 +15,14 @@ type UserTeam = {
 }
 
 export const ProtectedRoute: React.FC<Props> = ({ roles, children }) => {
-  const authObject = localStorage.getItem('roles');
-  if (!authObject) return <Navigate to="/login" />;
+  //const authObject = localStorage.getItem('roles');
+  //if (!authObject) return <Navigate to="/login" />;
 
-  const user: UserTeam[] = JSON.parse(authObject);
+ // const user: UserTeam[] = JSON.parse(authObject);
 
-  const hasAccess = user.some((userTeam) => roles.includes(userTeam.name));
+  //const hasAccess = user.some((userTeam) => roles.includes(userTeam.name));
 
-  if (!hasAccess) return <Navigate to="/login" />;
+  //if (!hasAccess) return <Navigate to="/login" />;
 
   return (
     <BaseLayout>

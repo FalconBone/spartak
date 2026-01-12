@@ -4,6 +4,8 @@ import { Shirt, ClipboardCheck } from "lucide-react";
 import { Button } from "@shared/ui/button/Button";
 import { Modal } from "@shared/ui/modal/Modal";
 import "./CharacterPage.scss";
+import vesh from '../../../../public/вешалка.png'
+import task from '../../../../public/task.png'
 
 function Character({ skinColor }: { skinColor: string }) {
   return (
@@ -37,10 +39,10 @@ export function CharacterPage() {
 
         <div className="side-buttons">
           <Button size="icon" className="icon-button" onClick={() => {}}>
-            <Shirt />
+            <img src={vesh}/>
           </Button>
           <Button size="icon" className="icon-button" onClick={() => setModalOpen(true)}>
-            <ClipboardCheck />
+            <img src={task}/>
           </Button>
         </div>
       </div>

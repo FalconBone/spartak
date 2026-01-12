@@ -1,30 +1,24 @@
 // src/widgets/Header/Header.tsx
-import { Settings } from "lucide-react";
+import { Settings, Crown, Ban } from "lucide-react";
 import "./Header.scss";
 import { useState } from "react";
 import { usePlayerStore } from "@shared/store/usePlayerStore";
-
-interface HeaderProps {
-  username: string;
-  energy: number; // 0..10
-  level: number;
-  xp: number; // 0..999
-}
-
-//{ username, energy, level, xp }: HeaderProps
+import face from "../../../public/face.avif";
+import coin from "../../../public/coin.jpg";
 
 export function Header() {
+  const [username] = useState<string>("FalconBone");
 
-  const [username, setUsername] = useState<string>('FalconBone')
-  const { energy, level, xp } = usePlayerStore();
-
+  const { energy, level, xp, coins, hasSubscription } = usePlayerStore();
 
   const xpPercent = Math.min((xp / 999) * 100, 100);
   const energyBlocks = Array.from({ length: 10 }, (_, i) => i < energy);
 
   return (
     <header className="header">
-      <div className="header__avatar" />
+      <div className="header__avatar">
+        <img src={face} />
+      </div>
 
       <div className="header__info">
         <div className="header__username">{username}</div>
@@ -52,13 +46,33 @@ export function Header() {
             />
           </div>
 
-          <div className="header__xp">{xp}/999 XP</div>
+          <div className="header__xp">{xp}/999</div>
         </div>
       </div>
 
-      <button className="header__settings">
-        <Settings />
-      </button>
+      {/* Блок валюты и подписки */}
+      <div className="header__top-right">
+        <div className="header__currency">
+          <span className="header__coins">{coins}</span>
+          <img
+            src={coin}
+            alt="coins"
+            className="header__coin-icon"
+          />
+        </div>
+
+        <div className="header__sub-status">
+          {hasSubscription ? (
+            <Crown className="header__sub-icon header__sub-icon--active" />
+          ) : (
+            <Ban className="header__sub-icon header__sub-icon--inactive" />
+          )}
+        </div>
+
+        <button className="header__settings">
+          <Settings />
+        </button>
+      </div>
     </header>
   );
 }

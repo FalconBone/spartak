@@ -4,7 +4,10 @@ import { persist } from "zustand/middleware";
 interface PlayerState {
   energy: number;    
   level: number;     
-  xp: number;        
+  xp: number;
+  coins: 150,
+  hasSubscription: true,
+        
 
   addXP: (value: number) => void;
   spendEnergy: (value: number) => void;
@@ -16,6 +19,9 @@ export const usePlayerStore = create<PlayerState>()(
       energy: 10,
       level: 1,
       xp: 0,
+      coins: 150,
+      hasSubscription: true,
+
 
       addXP: (value) =>
         set((state) => {

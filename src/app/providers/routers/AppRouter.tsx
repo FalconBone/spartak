@@ -9,6 +9,8 @@ import { UserStatsPage } from "@pages/stats";
 import { QuestsPage } from "@pages/quests";
 import { QuestExercisePage } from "@pages/exercise";
 import { QuestMapPage } from "@pages/questMap";
+import { AuthPage } from "@pages/auth";
+
 
 export const AppRouter = () => {
 
@@ -20,10 +22,11 @@ export const AppRouter = () => {
                 errorElement={<ErrorPage />}
             >
                 <Route path="/" element={<Navigate to={navigationMap.userAvatar} />} />
+                <Route path="/auth" element={<AuthPage />}/>
                 <Route
                     path={navigationMap.stats}
                     element={
-                        <ProtectedRoute roles={['Admins', 'Owners', 'Managers', 'Developers']}>
+                        <ProtectedRoute roles={['Admins', 'Owners', 'Managers', 'Developers', null]}>
                             {<UserStatsPage/>}
                         </ProtectedRoute>
                     }

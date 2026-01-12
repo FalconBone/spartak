@@ -1,0 +1,123 @@
+.auth-page {
+  width: 100%;
+  min-height: 100vh;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background: #f2f3f7;
+  padding: 16px;
+}
+
+.auth-card {
+  width: 100%;
+  max-width: 260px;
+
+  background: #fff;
+  padding: 24px 20px;
+
+  border-radius: 16px;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+
+  h1 {
+    text-align: center;
+    font-size: 24px;
+    font-weight: 700;
+    margin: 0 0 8px 0;
+  }
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+
+  label {
+    font-size: 14px;
+    font-weight: 600;
+    color: #333;
+  }
+
+  input {
+    width: 90%;
+    padding: 12px 14px;
+
+    border-radius: 10px;
+    border: 1px solid #d1d1d1;
+    background: #fafafa;
+
+    font-size: 15px;
+    outline: none;
+    transition: border-color 0.2s;
+
+    &:focus {
+      border-color: #4e7cff;
+      background: #fff;
+    }
+  }
+}
+
+.error {
+  width: 100%;
+  background: #ffe5e5;
+  color: #d20000;
+
+  padding: 10px 12px;
+
+  border-radius: 8px;
+  font-size: 14px;
+  text-align: center;
+  line-height: 1.3;
+}
+
+.btn-primary,
+.btn-secondary {
+  width: 100%;
+  padding: 12px;
+
+  border: none;
+  border-radius: 10px;
+
+  font-size: 16px;
+  font-weight: 600;
+
+  cursor: pointer;
+  transition: opacity 0.15s;
+}
+
+.btn-primary {
+  background: #4e7cff;
+  color: #fff;
+
+  &:active {
+    opacity: 0.75;
+  }
+}
+
+.btn-secondary {
+  background: #eaeaea;
+  color: #333;
+
+  &:active {
+    opacity: 0.75;
+  }
+}
+
+/* Адаптация под очень маленькие экраны */
+@media (max-width: 440px) {
+  .auth-card {
+    padding: 20px 16px;
+    border-radius: 14px;
+  }
+
+  .btn-primary,
+  .btn-secondary {
+    padding: 10px;
+    font-size: 15px;
+  }
+}
