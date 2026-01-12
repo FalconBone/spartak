@@ -10,6 +10,7 @@ import { QuestsPage } from "@pages/quests";
 import { QuestExercisePage } from "@pages/exercise";
 import { QuestMapPage } from "@pages/questMap";
 import { AuthPage } from "@pages/auth";
+import { RegisterPage } from "@pages/registration";
 
 
 export const AppRouter = () => {
@@ -23,6 +24,7 @@ export const AppRouter = () => {
             >
                 <Route path="/" element={<Navigate to={navigationMap.userAvatar} />} />
                 <Route path="/auth" element={<AuthPage />}/>
+                <Route path="/reg" element={<RegisterPage />}/>
                 <Route
                     path={navigationMap.stats}
                     element={
